@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Início</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+<style>
+  *{margin:0;padding:0;box-sizing:border-box}
+  body{background:#0A0A0B;color:#fff;font-family:'Inter',sans-serif;min-height:100vh;display:flex;align-items:center;justify-content:center;padding:24px}
+  .wrap{max-width:900px;width:100%;display:grid;grid-template-columns:1.2fr 0.8fr;gap:40px;align-items:center}
+  .badge{display:inline-block;padding:6px 12px;border-radius:100px;background:#1A1A1E;border:1px solid #2A2A30;color:#9F9FA9;font-size:12px;letter-spacing:1px;text-transform:uppercase;margin-bottom:20px}
+  h1{font-size:52px;line-height:0.95;letter-spacing:-2px;font-weight:800;margin-bottom:16px}
+  h1 span{color:#6C6C7D}
+  p{color:#9F9FA9;font-size:18px;line-height:1.6;margin-bottom:32px;max-width:420px}
+  .btn{display:inline-flex;align-items:center;gap:8px;padding:14px 24px;background:#fff;color:#000;text-decoration:none;border-radius:12px;font-weight:600;font-size:15px;transition:0.2s}
+  .btn:hover{transform:translateY(-2px);box-shadow:0 10px 30px rgba(255,255,255,0.15)}
+  .card{background:linear-gradient(180deg,#151519,#0F0F12);border:1px solid #232328;border-radius:20px;padding:24px}
+  .card h3{font-size:14px;color:#9F9FA9;text-transform:uppercase;letter-spacing:1px;margin-bottom:16px}
+  .line{display:flex;justify-content:space-between;padding:12px 0;border-bottom:1px solid #1E1E24;font-size:14px}
+  .line:last-child{border:none}
+  @media(max-width:700px){.wrap{grid-template-columns:1fr}h1{font-size:38px}}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <div>
+    <div class="badge">Portfolio • Flask App</div>
+    <h1>Para prosseguir é <span>necessário se cadastrar.</span></h1>
+    <p>Sistema simples de cadastro com Flask + SQLite. Feito para demonstração de backend.</p>
+    <a href="{{ url_for('cadastrar') }}" class="btn">Cadastrar-se aqui →</a>
+  </div>
+  <div class="card">
+    <h3>Stack do projeto</h3>
+    <div class="line"><span>Backend</span><strong>Flask</strong></div>
+    <div class="line"><span>Database</span><strong>SQLite3</strong></div>
+    <div class="line"><span>Frontend</span><strong>HTML / CSS</strong></div>
+    <div class="line"><span>Status</span><strong style="color:#22c55e">● Online</strong></div>
+  </div>
+</div>
+</body>
+</html>
